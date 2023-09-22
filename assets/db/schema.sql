@@ -7,7 +7,6 @@ USE employeeTracker_db;
 CREATE TABLE department(
     department_id INT NOT NULL AUTO_INCREMENT,
     department_name VARCHAR(30),
-    store_number INT,
     PRIMARY KEY (department_id)
 );
 
@@ -21,14 +20,13 @@ CREATE TABLE role (
 );
 
 CREATE TABLE employee (
-    employee_id INT AUTO_INCREMENT,
+    employee_id INT AUTO_INCREMENT NOT NULL,
     first_name VARCHAR(30),
     last_name VARCHAR(30),
     role_id INT,
     department_id INT,
-    manager_id INT NULL,
-    store_number INT,
+    manager_id INT,
     PRIMARY KEY (employee_id),
     CONSTRAINT fk_role FOREIGN KEY (role_id) REFERENCES role(role_id) ON DELETE CASCADE,
-    CONSTRAINT fk_manager FOREIGN KEY (manager_id) REFERENCES employee(employee_id) 
+    CONSTRAINT fk_manager FOREIGN KEY (manager_id) REFERENCES employee(employee_id) ON DELETE SET NULL
     );
