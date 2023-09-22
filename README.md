@@ -13,6 +13,8 @@ To recreate something similar to this you will need the following packages insta
 ## Usage
 The idea of this project allows you to edit employee, role, department, employees' manager, and salary to match your workplace. I have Inquierer installed which it allows input for certain options such as adding a new employee, role, and department. I also had implemented lists for some of the other menu options to make navigation easer for the user. More work needs to be done to have it be fully funtional (as mentioned above).
 
+[Where to watch a video example](https://drive.google.com/file/d/1YTkrF0LizTuYjq_Px_zRmje3ddczhApS/view?usp=drive_link)
+
 ## License
 MIT License
 
